@@ -39,6 +39,10 @@ import { ConcatAllComponent } from './concat-all/concat-all.component';
 import { MergeAllComponent } from './merge-all/merge-all.component';
 import { CombineLatestAllComponent } from './combine-latest-all/combine-latest-all.component';
 import { StartWithComponent } from './start-with/start-with.component';
+import { FilterComponent } from './filter/filter.component';
+import { FirstComponent } from './first/first.component';
+import { LastComponent } from './last/last.component';
+import { SingleComponent } from './single/single.component';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -78,7 +82,11 @@ const appRoutes: Routes = [
   { path: 'concatAllComponent', component: ConcatAllComponent },
   { path: 'mergeAllComponent', component: MergeAllComponent },
   { path: 'combineLatestAllComponent', component: CombineLatestAllComponent },
-  { path: 'startWithComponent', component: StartWithComponent }
+  { path: 'startWithComponent', component: StartWithComponent },
+  { path: 'filterComponent', component: FilterComponent },
+  { path: 'firstComponent', component: FirstComponent },
+  { path: 'lastComponent', component: LastComponent },
+  { path: 'singleComponent', component: SingleComponent }
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],

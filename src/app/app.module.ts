@@ -43,6 +43,10 @@ import { ConcatAllComponent } from './concat-all/concat-all.component';
 import { MergeAllComponent } from './merge-all/merge-all.component';
 import { CombineLatestAllComponent } from './combine-latest-all/combine-latest-all.component';
 import { StartWithComponent } from './start-with/start-with.component';
+import { FilterComponent } from './filter/filter.component';
+import { FirstComponent } from './first/first.component';
+import { LastComponent } from './last/last.component';
+import { SingleComponent } from './single/single.component';
 
 @NgModule({
   imports: [BrowserModule, AppRouterModule],
@@ -85,7 +89,11 @@ import { StartWithComponent } from './start-with/start-with.component';
     ConcatAllComponent,
     MergeAllComponent,
     CombineLatestAllComponent,
-    StartWithComponent
+    StartWithComponent,
+    FilterComponent,
+    FirstComponent,
+    LastComponent,
+    SingleComponent
   ],
   bootstrap: [AppComponent]
 })
