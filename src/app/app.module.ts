@@ -53,6 +53,9 @@ import { SkipComponent } from './skip/skip.component';
 import { SkipLastComponent } from './skip-last/skip-last.component';
 import { SkipUntilComponent } from './skip-until/skip-until.component';
 import { SkipWhileComponent } from './skip-while/skip-while.component';
+import { DistinctComponent } from './distinct/distinct.component';
+import { DisitinctUntilChangedComponent } from './disitinct-until-changed/disitinct-until-changed.component';
+import { DistinctUntilKeyChangedComponent } from './distinct-until-key-changed/distinct-until-key-changed.component';
 
 @NgModule({
   imports: [BrowserModule, AppRouterModule],
@@ -105,7 +108,10 @@ import { SkipWhileComponent } from './skip-while/skip-while.component';
     SkipComponent,
     SkipLastComponent,
     SkipUntilComponent,
-    SkipWhileComponent
+    SkipWhileComponent,
+    DistinctComponent,
+    DisitinctUntilChangedComponent,
+    DistinctUntilKeyChangedComponent
   ],
   bootstrap: [AppComponent]
 })

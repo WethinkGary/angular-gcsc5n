@@ -49,6 +49,9 @@ import { SkipComponent } from './skip/skip.component';
 import { SkipLastComponent } from './skip-last/skip-last.component';
 import { SkipUntilComponent } from './skip-until/skip-until.component';
 import { SkipWhileComponent } from './skip-while/skip-while.component';
+import { DistinctComponent } from './distinct/distinct.component';
+import { DisitinctUntilChangedComponent } from './disitinct-until-changed/disitinct-until-changed.component';
+import { DistinctUntilKeyChangedComponent } from './distinct-until-key-changed/distinct-until-key-changed.component';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -99,7 +102,16 @@ const appRoutes: Routes = [
   { path: 'skipComponent', component: SkipComponent },
   { path: 'skipLastComponent', component: SkipLastComponent },
   { path: 'skipUntilComponent', component: SkipUntilComponent },
-  { path: 'skipWhileComponent', component: SkipWhileComponent }
+  { path: 'skipWhileComponent', component: SkipWhileComponent },
+  { path: 'distinctComponent', component: DistinctComponent },
+  {
+    path: 'disitinctUntilChangedComponent',
+    component: DisitinctUntilChangedComponent
+  },
+  {
+    path: 'distinctUntilKeyChangedComponent',
+    component: DistinctUntilKeyChangedComponent
+  }
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],

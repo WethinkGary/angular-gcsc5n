@@ -31,8 +31,7 @@ export class SkipWhileComponent implements OnInit, OnDestroy {
 
     source$
       .pipe(
-  
-        take(5) ,
+        take(5),
         skipWhile(data => data < 3)
       )
       .subscribe(
