@@ -47,6 +47,12 @@ import { FilterComponent } from './filter/filter.component';
 import { FirstComponent } from './first/first.component';
 import { LastComponent } from './last/last.component';
 import { SingleComponent } from './single/single.component';
+import { TakeUntilComponent } from './take-until/take-until.component';
+import { TakeWhileComponent } from './take-while/take-while.component';
+import { SkipComponent } from './skip/skip.component';
+import { SkipLastComponent } from './skip-last/skip-last.component';
+import { SkipUntilComponent } from './skip-until/skip-until.component';
+import { SkipWhileComponent } from './skip-while/skip-while.component';
 
 @NgModule({
   imports: [BrowserModule, AppRouterModule],
@@ -93,7 +99,13 @@ import { SingleComponent } from './single/single.component';
     FilterComponent,
     FirstComponent,
     LastComponent,
-    SingleComponent
+    SingleComponent,
+    TakeUntilComponent,
+    TakeWhileComponent,
+    SkipComponent,
+    SkipLastComponent,
+    SkipUntilComponent,
+    SkipWhileComponent
   ],
   bootstrap: [AppComponent]
 })

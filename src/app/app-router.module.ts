@@ -43,6 +43,12 @@ import { FilterComponent } from './filter/filter.component';
 import { FirstComponent } from './first/first.component';
 import { LastComponent } from './last/last.component';
 import { SingleComponent } from './single/single.component';
+import { TakeUntilComponent } from './take-until/take-until.component';
+import { TakeWhileComponent } from './take-while/take-while.component';
+import { SkipComponent } from './skip/skip.component';
+import { SkipLastComponent } from './skip-last/skip-last.component';
+import { SkipUntilComponent } from './skip-until/skip-until.component';
+import { SkipWhileComponent } from './skip-while/skip-while.component';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -86,7 +92,14 @@ const appRoutes: Routes = [
   { path: 'filterComponent', component: FilterComponent },
   { path: 'firstComponent', component: FirstComponent },
   { path: 'lastComponent', component: LastComponent },
-  { path: 'singleComponent', component: SingleComponent }
+  { path: 'singleComponent', component: SingleComponent },
+  { path: 'takeUntilComponent', component: TakeUntilComponent },
+  { path: 'takeWhileComponent', component: TakeWhileComponent },
+  { path: 'takeWhileComponent', component: TakeWhileComponent },
+  { path: 'skipComponent', component: SkipComponent },
+  { path: 'skipLastComponent', component: SkipLastComponent },
+  { path: 'skipUntilComponent', component: SkipUntilComponent },
+  { path: 'skipWhileComponent', component: SkipWhileComponent }
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],
