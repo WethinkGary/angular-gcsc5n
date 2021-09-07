@@ -56,6 +56,17 @@ import { SkipWhileComponent } from './skip-while/skip-while.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { DisitinctUntilChangedComponent } from './disitinct-until-changed/disitinct-until-changed.component';
 import { DistinctUntilKeyChangedComponent } from './distinct-until-key-changed/distinct-until-key-changed.component';
+import { SampleTimeComponent } from './sample-time/sample-time.component';
+import { SampleComponent } from './sample/sample.component';
+import { AuditTimeComponent } from './audit-time/audit-time.component';
+import { AuditComponent } from './audit/audit.component';
+import { DebounceTimeComponent } from './debounce-time/debounce-time.component';
+import { DebounceComponent } from './debounce/debounce.component';
+import { IsEmptyComponent } from './is-empty/is-empty.component';
+import { DefaultIfEmptyComponent } from './default-if-empty/default-if-empty.component';
+import { FindComponent } from './find/find.component';
+import { FindIndexComponent } from './find-index/find-index.component';
+import { EveryComponent } from './every/every.component';
 
 @NgModule({
   imports: [BrowserModule, AppRouterModule],
@@ -111,7 +122,18 @@ import { DistinctUntilKeyChangedComponent } from './distinct-until-key-changed/d
     SkipWhileComponent,
     DistinctComponent,
     DisitinctUntilChangedComponent,
-    DistinctUntilKeyChangedComponent
+    DistinctUntilKeyChangedComponent,
+    SampleTimeComponent,
+    SampleComponent,
+    AuditTimeComponent,
+    AuditComponent,
+    DebounceTimeComponent,
+    DebounceComponent,
+    IsEmptyComponent,
+    DefaultIfEmptyComponent,
+    FindComponent,
+    FindIndexComponent,
+    EveryComponent
   ],
   bootstrap: [AppComponent]
 })

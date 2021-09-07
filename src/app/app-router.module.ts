@@ -52,6 +52,17 @@ import { SkipWhileComponent } from './skip-while/skip-while.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { DisitinctUntilChangedComponent } from './disitinct-until-changed/disitinct-until-changed.component';
 import { DistinctUntilKeyChangedComponent } from './distinct-until-key-changed/distinct-until-key-changed.component';
+import { SampleTimeComponent } from './sample-time/sample-time.component';
+import { SampleComponent } from './sample/sample.component';
+import { AuditTimeComponent } from './audit-time/audit-time.component';
+import { AuditComponent } from './audit/audit.component';
+import { DebounceTimeComponent } from './debounce-time/debounce-time.component';
+import { DebounceComponent } from './debounce/debounce.component';
+import { IsEmptyComponent } from './is-empty/is-empty.component';
+import { DefaultIfEmptyComponent } from './default-if-empty/default-if-empty.component';
+import { FindComponent } from './find/find.component';
+import { FindIndexComponent } from './find-index/find-index.component';
+import { EveryComponent } from './every/every.component';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -111,6 +122,50 @@ const appRoutes: Routes = [
   {
     path: 'distinctUntilKeyChangedComponent',
     component: DistinctUntilKeyChangedComponent
+  },
+  {
+    path: 'sampleTimeComponent',
+    component: SampleTimeComponent
+  },
+  {
+    path: 'sampleComponent',
+    component: SampleComponent
+  },
+  {
+    path: 'auditTimeComponent',
+    component: AuditTimeComponent
+  },
+  {
+    path: 'auditComponent',
+    component: AuditComponent
+  },
+  {
+    path: 'debounceTimeComponent',
+    component: DebounceTimeComponent
+  },
+  {
+    path: 'debounceComponent',
+    component: DebounceComponent
+  },
+  {
+    path: 'isEmptyComponent',
+    component: IsEmptyComponent
+  },
+  {
+    path: 'defaultIfEmptyComponent',
+    component: DefaultIfEmptyComponent
+  },
+  {
+    path: 'findComponent',
+    component: FindComponent
+  },
+  {
+    path: 'findIndexComponent',
+    component: FindIndexComponent
+  },
+  {
+    path: 'everyComponent',
+    component: EveryComponent
   }
 ];
 @NgModule({
