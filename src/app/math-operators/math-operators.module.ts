@@ -7,6 +7,6 @@ import { MathOperatorRouterModule } from './math-operators-router.module';
 @NgModule({
   imports: [CommonModule, MathOperatorRouterModule],
   declarations: [MathOperatorsComponent],
-  bootstrap: [MathOperatorsComponent]
+  bootstrap: []
 })
 export class MathOperatorsModule {}

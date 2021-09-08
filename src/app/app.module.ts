@@ -68,9 +68,16 @@ import { FindComponent } from './find/find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
 import { EveryComponent } from './every/every.component';
 import { MathOperatorsModule } from './math-operators/math-operators.module';
+import { HelloComponent } from './hello.component';
+import { UtilOperatorsModule } from './util-operators/util-operators.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRouterModule, MathOperatorsModule],
+  imports: [
+    BrowserModule,
+    AppRouterModule,
+    MathOperatorsModule,
+    UtilOperatorsModule
+  ],
   declarations: [
     AppComponent,
     CounterComponent,
@@ -134,7 +141,8 @@ import { MathOperatorsModule } from './math-operators/math-operators.module';
     DefaultIfEmptyComponent,
     FindComponent,
     FindIndexComponent,
-    EveryComponent
+    EveryComponent,
+    HelloComponent
   ],
   bootstrap: [AppComponent]
 })

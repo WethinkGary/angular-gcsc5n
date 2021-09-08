@@ -65,6 +65,7 @@ import { FindIndexComponent } from './find-index/find-index.component';
 import { EveryComponent } from './every/every.component';
 import { MathOperatorsComponent } from './math-operators/math-operators.component';
 import { MathOperatorsModule } from './math-operators/math-operators.module';
+import { HelloComponent } from './hello.component';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -175,7 +176,15 @@ const appRoutes: Routes = [
       import('./math-operators/math-operators.module').then(
         m => m.MathOperatorsModule
       )
-  }
+  },
+  {
+    path: 'utilOperatorsModule',
+    loadChildren: () =>
+      import('./util-operators/util-operators.module').then(
+        m => m.UtilOperatorsModule
+      )
+  },
+  { path: '', component: HelloComponent }
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],
