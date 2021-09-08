@@ -67,9 +67,10 @@ import { DefaultIfEmptyComponent } from './default-if-empty/default-if-empty.com
 import { FindComponent } from './find/find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
 import { EveryComponent } from './every/every.component';
+import { MathOperatorsModule } from './math-operators/math-operators.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRouterModule],
+  imports: [BrowserModule, AppRouterModule, MathOperatorsModule],
   declarations: [
     AppComponent,
     CounterComponent,

@@ -63,6 +63,8 @@ import { DefaultIfEmptyComponent } from './default-if-empty/default-if-empty.com
 import { FindComponent } from './find/find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
 import { EveryComponent } from './every/every.component';
+import { MathOperatorsComponent } from './math-operators/math-operators.component';
+import { MathOperatorsModule } from './math-operators/math-operators.module';
 
 const appRoutes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -166,6 +168,13 @@ const appRoutes: Routes = [
   {
     path: 'everyComponent',
     component: EveryComponent
+  },
+  {
+    path: 'mathOperatorsModule',
+    loadChildren: () =>
+      import('./math-operators/math-operators.module').then(
+        m => m.MathOperatorsModule
+      )
   }
 ];
 @NgModule({
