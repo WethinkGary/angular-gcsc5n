@@ -23,7 +23,14 @@ export class MinComponent implements OnInit, OnDestroy {
         console.log('min = ' + data);
       });
 
-    of(5)
+    /**
+     * 這個自訂的邏輯，回傳一個數字
+     * 大於0 x > y
+     * 等於0 x < y
+     * 小於0 x = y
+     * 類似java的compare
+     */
+    of(5, 1, 2, 9)
       .pipe(
         min((data1, data2) => {
           return data1 - data2;

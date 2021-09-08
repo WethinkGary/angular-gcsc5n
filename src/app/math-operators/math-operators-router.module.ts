@@ -5,8 +5,11 @@ import { MathOperatorsComponent } from './math-operators.component';
 import { MinComponent } from './min/min.component';
 
 const mathOperatorRoutes: Routes = [
-  { path: '', component: MathOperatorsComponent },
-  { path: 'min', component: MinComponent }
+  {
+    path: '',
+    component: MathOperatorsComponent,
+    children: [{ path: 'min', component: MinComponent }]
+  }
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(mathOperatorRoutes)],
