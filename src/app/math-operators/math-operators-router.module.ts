@@ -14,6 +14,6 @@ const mathOperatorRoutes: Routes = [
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(mathOperatorRoutes)],
   exports: [RouterModule],
-  declarations: []
+  declarations: [MinComponent]
 })
 export class MathOperatorRouterModule {}
