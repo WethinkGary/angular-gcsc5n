@@ -71,6 +71,7 @@ import { MathOperatorsModule } from './math-operators/math-operators.module';
 import { HelloComponent } from './hello.component';
 import { UtilOperatorsModule } from './util-operators/util-operators.module';
 import { ErrorOperatorsModule } from './error-operators/error-operators.module';
+import { MulticastOperatorsModule } from './multicast-operators/multicast-operators.module';
 
 @NgModule({
   imports: [
@@ -78,7 +79,8 @@ import { ErrorOperatorsModule } from './error-operators/error-operators.module';
     AppRouterModule,
     MathOperatorsModule,
     UtilOperatorsModule,
-    ErrorOperatorsModule
+    ErrorOperatorsModule,
+    MulticastOperatorsModule,
   ],
   declarations: [
     AppComponent,
@@ -144,8 +146,8 @@ import { ErrorOperatorsModule } from './error-operators/error-operators.module';
     FindComponent,
     FindIndexComponent,
     EveryComponent,
-    HelloComponent
+    HelloComponent,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iif, interval, of, throwError } from 'rxjs';
+import { fromEvent, iif, interval, of, throwError } from 'rxjs';
 import { map, retry, retryWhen, switchMap, take } from 'rxjs/operators';
 
 @Component({
@@ -28,6 +28,32 @@ export class RetryWhenComponent implements OnInit {
         map((data) => data + 1),
         retryWhen((error) => {
           return interval(2000).pipe(take(3));
+        })
+      )
+      .subscribe({
+        next: (data) => {
+          console.log('next => ', data);
+        },
+        error: (error) => {
+          console.log('error => ', error);
+        },
+        complete: () => {
+          console.log('complete !!!');
+        },
+      });
+
+    /*------------------------------------------------- */
+    const click$ = fromEvent(document, 'click');
+
+    interval(1000)
+      .pipe(
+        switchMap((data) => {
+          console.log('data => ', data);
+          return iif(() => data % 2 === 0, of(data), throwError('發生錯誤'));
+        }),
+        map((data) => data + 1),
+        retryWhen((error) => {
+          return click$;
         })
       )
       .subscribe({

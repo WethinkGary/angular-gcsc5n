@@ -65,6 +65,7 @@ import { FindIndexComponent } from './find-index/find-index.component';
 import { EveryComponent } from './every/every.component';
 import { MathOperatorsComponent } from './math-operators/math-operators.component';
 import { MathOperatorsModule } from './math-operators/math-operators.module';
+import { MulticastOperatorsModule } from './multicast-operators/multicast-operators.module';
 import { HelloComponent } from './hello.component';
 
 const appRoutes: Routes = [
@@ -120,82 +121,89 @@ const appRoutes: Routes = [
   { path: 'distinctComponent', component: DistinctComponent },
   {
     path: 'disitinctUntilChangedComponent',
-    component: DisitinctUntilChangedComponent
+    component: DisitinctUntilChangedComponent,
   },
   {
     path: 'distinctUntilKeyChangedComponent',
-    component: DistinctUntilKeyChangedComponent
+    component: DistinctUntilKeyChangedComponent,
   },
   {
     path: 'sampleTimeComponent',
-    component: SampleTimeComponent
+    component: SampleTimeComponent,
   },
   {
     path: 'sampleComponent',
-    component: SampleComponent
+    component: SampleComponent,
   },
   {
     path: 'auditTimeComponent',
-    component: AuditTimeComponent
+    component: AuditTimeComponent,
   },
   {
     path: 'auditComponent',
-    component: AuditComponent
+    component: AuditComponent,
   },
   {
     path: 'debounceTimeComponent',
-    component: DebounceTimeComponent
+    component: DebounceTimeComponent,
   },
   {
     path: 'debounceComponent',
-    component: DebounceComponent
+    component: DebounceComponent,
   },
   {
     path: 'isEmptyComponent',
-    component: IsEmptyComponent
+    component: IsEmptyComponent,
   },
   {
     path: 'defaultIfEmptyComponent',
-    component: DefaultIfEmptyComponent
+    component: DefaultIfEmptyComponent,
   },
   {
     path: 'findComponent',
-    component: FindComponent
+    component: FindComponent,
   },
   {
     path: 'findIndexComponent',
-    component: FindIndexComponent
+    component: FindIndexComponent,
   },
   {
     path: 'everyComponent',
-    component: EveryComponent
+    component: EveryComponent,
   },
   {
     path: 'mathOperatorsModule',
     loadChildren: () =>
       import('./math-operators/math-operators.module').then(
-        m => m.MathOperatorsModule
-      )
+        (m) => m.MathOperatorsModule
+      ),
   },
   {
     path: 'utilOperatorsModule',
     loadChildren: () =>
       import('./util-operators/util-operators.module').then(
-        m => m.UtilOperatorsModule
-      )
+        (m) => m.UtilOperatorsModule
+      ),
   },
   {
     path: 'errorOperatorsModule',
     loadChildren: () =>
       import('./error-operators/error-operators.module').then(
-        m => m.ErrorOperatorsModule
-      )
+        (m) => m.ErrorOperatorsModule
+      ),
   },
-  { path: '', component: HelloComponent }
+  {
+    path: 'multicastOperatorsModule',
+    loadChildren: () =>
+      import('./multicast-operators/multicast-operators.module').then(
+        (m) => m.MulticastOperatorsModule
+      ),
+  },
+  { path: '', component: HelloComponent },
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
-  declarations: []
+  declarations: [],
 })
 export class AppRouterModule {}

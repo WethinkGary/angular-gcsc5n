@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatchErrorComponent } from './catch-error/catch-error.component';
 import { ErrorOperatorsComponent } from './error-operators.component';
+import { FinalizeComponent } from './finalize/finalize.component';
 import { RetryWhenComponent } from './retry-when/retry-when.component';
 import { RetryComponent } from './retry/retry.component';
 
@@ -14,6 +15,7 @@ const errorOperatorRoutes: Routes = [
       { path: 'catchErrorComponent', component: CatchErrorComponent },
       { path: 'retryComponent', component: RetryComponent },
       { path: 'retryWhenComponent', component: RetryWhenComponent },
+      { path: 'finalizeComponent', component: FinalizeComponent },
     ],
   },
 ];
@@ -25,6 +27,7 @@ const errorOperatorRoutes: Routes = [
     CatchErrorComponent,
     RetryComponent,
     RetryWhenComponent,
+    FinalizeComponent,
   ],
 })
 export class ErrorOperatorsRouterModule {}
