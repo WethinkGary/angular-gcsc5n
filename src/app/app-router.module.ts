@@ -184,6 +184,13 @@ const appRoutes: Routes = [
         m => m.UtilOperatorsModule
       )
   },
+  {
+    path: 'errorOperatorsModule',
+    loadChildren: () =>
+      import('./error-operators/error-operators.module').then(
+        m => m.ErrorOperatorsModule
+      )
+  },
   { path: '', component: HelloComponent }
 ];
 @NgModule({

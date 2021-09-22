@@ -70,13 +70,15 @@ import { EveryComponent } from './every/every.component';
 import { MathOperatorsModule } from './math-operators/math-operators.module';
 import { HelloComponent } from './hello.component';
 import { UtilOperatorsModule } from './util-operators/util-operators.module';
+import { ErrorOperatorsModule } from './error-operators/error-operators.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRouterModule,
     MathOperatorsModule,
-    UtilOperatorsModule
+    UtilOperatorsModule,
+    ErrorOperatorsModule
   ],
   declarations: [
     AppComponent,
