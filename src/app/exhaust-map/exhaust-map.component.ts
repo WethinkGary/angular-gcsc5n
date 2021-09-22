@@ -5,7 +5,7 @@ import { exhaustMap, mergeMap, take, takeWhile } from 'rxjs/operators';
 @Component({
   selector: 'app-exhaust-map',
   templateUrl: './exhaust-map.component.html',
-  styleUrls: ['./exhaust-map.component.css']
+  styleUrls: ['./exhaust-map.component.css'],
 })
 export class ExhaustMapComponent implements OnInit, OnDestroy {
   reflush$;
@@ -23,7 +23,7 @@ export class ExhaustMapComponent implements OnInit, OnDestroy {
       takeWhile(() => this.alive)
     );
 
-    this.reflush$.subscribe(data => {
+    this.reflush$.subscribe((data) => {
       console.log('interval = ' + data);
     });
   }

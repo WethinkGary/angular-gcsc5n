@@ -4,8 +4,7 @@ import { exhaustMap, mergeMap, take, takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-error-operators',
-  templateUrl: './exhaust-map.component.html',
-  styleUrls: ['./exhaust-map.component.css'],
+  templateUrl: './error-operators.component.html',
 })
 export class ErrorOperatorsComponent implements OnInit, OnDestroy {
   alive = true;
@@ -14,5 +13,7 @@ export class ErrorOperatorsComponent implements OnInit, OnDestroy {
     this.alive = false;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('ErrorOperatorsComponent !!!');
+  }
 }
