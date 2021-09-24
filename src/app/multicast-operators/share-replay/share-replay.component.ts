@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
-import { shareReplay } from 'rxjs/operators';
+import { shareReplay, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-share-replay',
@@ -17,14 +17,14 @@ export class ShareReplayComponent implements OnInit {
      * bufferSize 最多保留最近幾次事件資料
      * windowTime 事件保留時間(毫秒)
      */
-    const source$ = interval(1000).pipe(shareReplay(2));
+    const source$ = interval(1000).pipe(take(10), shareReplay(2));
 
     source$.subscribe((data) => {
-      console.log('shareReplay 第一次訂閱');
+      console.log('shareReplay 第一次訂閱 ' + data);
     });
 
     setTimeout(() => {
-      console.log('shareReplay 第二次訂閱');
+      console.log('shareReplay 第二次訂閱 ' + data);
     }, 5000);
   }
 }

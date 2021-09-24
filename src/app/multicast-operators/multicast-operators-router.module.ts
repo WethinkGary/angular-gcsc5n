@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConnectableComponent } from './connectable/connectable.component';
 import { ShareComponent } from './share/share.component';
-import { ShareComponent } from './share-replay/share-replay.component';
+import { ShareReplayComponent } from './share-replay/share-replay.component';
 import { MulticastOperatorsComponent } from './multicast-operators.component';
 
 const multicastOperatorRoutes: Routes = [
