@@ -24,7 +24,9 @@ export class ShareReplayComponent implements OnInit {
     });
 
     setTimeout(() => {
-      console.log('shareReplay 第二次訂閱 ' + data);
+      source$.subscribe((data) => {
+        console.log('shareReplay 第二次訂閱 ' + data);
+      });
     }, 5000);
   }
 }
